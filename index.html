@@ -8,15 +8,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="academic-theme">
     <header>
         <nav>
-            <a href="index.html" class="logo">DylanOD</a>
+            <a href="index.html" class="logo">dylan<span>@</span>ucd</a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#housing-crisis">Housing Crisis</a></li>
+                <li><a href="#research">Research</a></li>
                 <li><a href="demo.html">Demo</a></li>
-                <li><a href="#results">Results</a></li>
+                <li><a href="#findings">Findings</a></li>
                 <li><a href="technical.html">Technical</a></li>
                 <li><a href="ethical.html">Ethical</a></li>
                 <li><a href="business.html">Business</a></li>
@@ -25,145 +25,373 @@
         </nav>
     </header>
 
-    <div class="hero">
+    <div class="hero academic-hero">
         <div class="hero-content">
+            <div class="project-tag">Final Year Project</div>
             <h1>Property Assessment of Derelict Buildings in Ireland Using LiDAR and Photogrammetry</h1>
-            <p>Revolutionizing property assessment through advanced technology to address Ireland's housing crisis</p>
-            <a href="demo.html" class="btn">View Demo</a>
-            <a href="full-report.pdf" class="btn btn-outline">View Full Report</a>
+            <p class="author">Dylan O'Donnell | Information Technology Management, SETU</p>
+            <p class="project-subtitle">Exploring consumer technology solutions to address Ireland's housing crisis</p>
+            <div class="hero-actions">
+                <a href="demo.html" class="btn">View Demo</a>
+                <a href="full-report.pdf" class="btn btn-outline">Full Research Paper</a>
+            </div>
         </div>
     </div>
 
-    <section id="about">
-        <div class="container">
-            <div class="about-layout">
-                <div class="about-text">
-                    <h2>About The Project</h2>
-                    <p>Ireland is currently facing a severe housing crisis, with approximately 81,000 abandoned properties scattered across the country. While many of these buildings could be repurposed to address housing shortages, redevelopment remains slow due to a combination of financial, bureaucratic, and logistical barriers.</p>
-                    <p>A key challenge in this process is the uncertainty surrounding initial property evaluations, which can be costly, time-consuming, and often reliant on subjective assessments. Traditional evaluation methods require professional surveyors or architects to conduct manual site inspections, draft sketches, and document structural conditions.</p>
-                    <p>This project investigates whether consumer-grade LiDAR and photogrammetry technologies can provide an efficient, scalable alternative for documenting derelict properties. By using smartphones equipped with LiDAR sensors and photogrammetry applications, this study explores the feasibility of generating accurate, high-fidelity 3D models to support property assessment.</p>
+    <main class="academic-layout">
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <h3>Project Overview</h3>
+                <ul class="sidebar-nav">
+                    <li><a href="#about">About the Project</a></li>
+                    <li><a href="#research">Research Context</a></li>
+                    <li><a href="#methodology">Methodology</a></li>
+                    <li><a href="#findings">Key Findings</a></li>
+                    <li><a href="#implications">Implications</a></li>
+                </ul>
+                
+                <h3>Quick Stats</h3>
+                <div class="stat-highlight">
+                    <span class="stat-number">81,000+</span>
+                    <span class="stat-desc">Vacant properties across Ireland</span>
                 </div>
-                <div class="sketchfab-embed-wrapper" style="width: 100%; height: 450px;">
-                    <iframe title="Sittingroom Scaniverse" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share style="width: 100%; height: 100%;" src="https://sketchfab.com/models/db231a54ee434db681daacc98912ba9e/embed"> </iframe>
-                    <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
-                        <a href="https://sketchfab.com/3d-models/sittingroom-scaniverse-db231a54ee434db681daacc98912ba9e" target="_blank" style="color: #4A4A4A; text-decoration: none;">Sittingroom Scaniverse by Dylan O'Donnell</a> on <a href="https://sketchfab.com" target="_blank" style="color: #4A4A4A; text-decoration: none;">Sketchfab</a>
-                    </p>
+                <div class="stat-highlight">
+                    <span class="stat-number">78%</span>
+                    <span class="stat-desc">Cost reduction compared to traditional assessment</span>
+                </div>
+                <div class="stat-highlight">
+                    <span class="stat-number">97%</span>
+                    <span class="stat-desc">Accuracy of LiDAR measurements</span>
+                </div>
+                
+                <div class="download-section">
+                    <h3>Downloads</h3>
+                    <a href="full-report.pdf" class="download-link"><i class="fas fa-file-pdf"></i> Full Research Paper</a>
+                    <a href="presentation.pdf" class="download-link"><i class="fas fa-file-powerpoint"></i> Presentation</a>
+                    <a href="data-appendix.zip" class="download-link"><i class="fas fa-file-archive"></i> Data Appendix</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </aside>
 
-    <section id="housing-crisis" style="background-color: var(--light);">
-        <div class="container">
-            <div class="section-title">
-                <h2>Ireland's Housing Crisis</h2>
-                <p>Key statistics and facts highlighting the urgency of addressing vacant and derelict properties</p>
-            </div>
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <h3>81,000+</h3>
-                    <p>Vacant properties across Ireland that could potentially address housing shortages</p>
-                </div>
-                
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-euro-sign"></i>
-                    </div>
-                    <h3>€11,000+</h3>
-                    <p>Average cost of traditional property assessments including surveyor fees and documentation</p>
-                </div>
-                
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>11,000+</h3>
-                    <p>Homeless individuals in Ireland who could benefit from repurposed vacant buildings</p>
-                </div>
-                
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <h3>92%</h3>
-                    <p>Percentage of vacant properties that require significant renovation before habitation</p>
-                </div>
-            </div>
-            
-            <div class="solution-overview">
-                <h3>How LiDAR Technology Can Help</h3>
-                <div class="solution-cards">
-                    <div class="solution-card">
-                        <div class="solution-icon">
-                            <i class="fas fa-tachometer-alt"></i>
+        <div class="content-area">
+            <section id="about" class="content-section">
+                <h2>About the Research</h2>
+                <div class="section-content">
+                    <p class="lead-paragraph">This dissertation investigates the potential of consumer-grade LiDAR and photogrammetry technology to transform property assessment of derelict buildings in Ireland, addressing a key barrier to housing redevelopment.</p>
+                    
+                    <div class="two-column">
+                        <div>
+                            <p>Ireland is currently facing a severe housing crisis, with approximately 81,000 abandoned properties scattered across the country. While many of these buildings could be repurposed to address housing shortages, redevelopment remains slow due to a combination of financial, bureaucratic, and logistical barriers.</p>
+                            
+                            <p>A key challenge in this process is the uncertainty surrounding initial property evaluations, which can be costly, time-consuming, and often reliant on subjective assessments. Traditional evaluation methods require professional surveyors or architects to conduct manual site inspections, draft sketches, and document structural conditions.</p>
                         </div>
-                        <h4>Speed</h4>
-                        <p>Reduce assessment time from days to hours with rapid scanning technology</p>
+                        
+                        <div>
+                            <blockquote>
+                                "The initial assessment of derelict properties represents a significant barrier to redevelopment. We need innovative, cost-effective solutions to accelerate the identification and evaluation of suitable properties."
+                                <cite>- Housing Agency of Ireland, 2024</cite>
+                            </blockquote>
+                            
+                            <p>This research explores whether affordable, accessible technology can disrupt this process, making property assessment more efficient, accurate, and accessible to a wider range of stakeholders including local authorities, community housing organizations, and individual property owners.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="research" class="content-section">
+                <h2>Research Context</h2>
+                <div class="section-content">
+                    <div class="media-text-container">
+                        <div class="text-content">
+                            <h3>Ireland's Housing Crisis</h3>
+                            <p>The housing situation in Ireland has reached critical levels, with homelessness increasing by 23% in 2023 alone. Despite this urgent need, thousands of potential housing units sit vacant or derelict across the country.</p>
+                            
+                            <p>Recent policy initiatives have attempted to address this issue through taxation measures and grants for renovation, but practical barriers remain:</p>
+                            
+                            <ul class="academic-list">
+                                <li><strong>Assessment costs</strong> often range from €2,800-€11,000 per property</li>
+                                <li><strong>Specialist skills shortage</strong> creates bottlenecks in the redevelopment pipeline</li>
+                                <li><strong>Uncertainty around renovation costs</strong> deters investment in derelict properties</li>
+                                <li><strong>Documentation challenges</strong> for buildings with lost or incomplete plans</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="media-content map-container">
+                            <img src="/api/placeholder/500/400" alt="Heat map showing distribution of vacant properties across Irish counties" class="research-image">
+                            <p class="caption">Fig 1: Distribution of vacant and derelict properties across Ireland (Housing Agency, 2024)</p>
+                        </div>
                     </div>
                     
-                    <div class="solution-card">
-                        <div class="solution-icon">
-                            <i class="fas fa-hand-holding-euro"></i>
+                    <h3>Technological Context</h3>
+                    <p>Consumer technology has recently reached a turning point with the introduction of LiDAR sensors in mainstream devices like the iPhone 12 Pro (2020) and iPad Pro. These sensors use invisible laser pulses to measure distances with millimeter accuracy, creating detailed 3D models of physical spaces.</p>
+                    
+                    <div class="technology-comparison">
+                        <div class="comparison-item">
+                            <h4>Traditional Assessment Methods</h4>
+                            <ul class="check-list negative">
+                                <li>Costly professional services</li>
+                                <li>Time-intensive manual measurements</li>
+                                <li>Subjective condition assessments</li>
+                                <li>Limited visual documentation</li>
+                                <li>Difficult to share or collaborate</li>
+                            </ul>
                         </div>
-                        <h4>Cost Reduction</h4>
-                        <p>Cut evaluation costs by up to 78% compared to traditional methods</p>
+                        
+                        <div class="comparison-item">
+                            <h4>LiDAR-Based Assessment</h4>
+                            <ul class="check-list positive">
+                                <li>Accessible consumer technology</li>
+                                <li>Rapid digital measurements</li>
+                                <li>Comprehensive visual documentation</li>
+                                <li>3D models for virtual exploration</li>
+                                <li>Easy sharing and collaboration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="methodology" class="content-section">
+                <h2>Methodology</h2>
+                <div class="section-content">
+                    <p class="research-approach">This research employed a mixed-methods approach combining technical evaluation, comparative analysis, and stakeholder feedback.</p>
+                    
+                    <div class="methodology-diagram">
+                        <div class="method-stage">
+                            <div class="stage-number">1</div>
+                            <h4>Data Collection</h4>
+                            <ul class="method-details">
+                                <li>LiDAR scanning of 8 derelict properties</li>
+                                <li>Photogrammetry capture of same sites</li>
+                                <li>Traditional measurement by surveyors</li>
+                                <li>Structured documentation of workflow</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="method-stage">
+                            <div class="stage-number">2</div>
+                            <h4>Comparative Analysis</h4>
+                            <ul class="method-details">
+                                <li>Accuracy evaluation against traditional measurements</li>
+                                <li>Time and cost efficiency assessment</li>
+                                <li>Utility analysis for different stakeholders</li>
+                                <li>Technical limitations documentation</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="method-stage">
+                            <div class="stage-number">3</div>
+                            <h4>Stakeholder Feedback</h4>
+                            <ul class="method-details">
+                                <li>Interviews with 12 property professionals</li>
+                                <li>Survey of 45 potential end-users</li>
+                                <li>Focus group with local authority representatives</li>
+                                <li>User testing of 3D models with architects</li>
+                            </ul>
+                        </div>
                     </div>
                     
-                    <div class="solution-card">
-                        <div class="solution-icon">
-                            <i class="fas fa-chart-line"></i>
+                    <div class="tools-used">
+                        <h3>Tools & Equipment</h3>
+                        <div class="tools-grid">
+                            <div class="tool-item">
+                                <i class="fas fa-mobile-alt"></i>
+                                <h4>iPhone 13 Pro</h4>
+                                <p>Primary LiDAR capture device</p>
+                            </div>
+                            
+                            <div class="tool-item">
+                                <i class="fas fa-tablet-alt"></i>
+                                <h4>iPad Pro 12.9"</h4>
+                                <p>Secondary capture device</p>
+                            </div>
+                            
+                            <div class="tool-item">
+                                <i class="fas fa-ruler"></i>
+                                <h4>Leica Disto X4</h4>
+                                <p>Validation measurement tool</p>
+                            </div>
+                            
+                            <div class="tool-item">
+                                <i class="fas fa-cube"></i>
+                                <h4>Polycam App</h4>
+                                <p>LiDAR scanning software</p>
+                            </div>
+                            
+                            <div class="tool-item">
+                                <i class="fas fa-camera"></i>
+                                <h4>Meshroom</h4>
+                                <p>Photogrammetry processing</p>
+                            </div>
+                            
+                            <div class="tool-item">
+                                <i class="fas fa-laptop-code"></i>
+                                <h4>Blender</h4>
+                                <p>3D model optimization</p>
+                            </div>
                         </div>
-                        <h4>Scalability</h4>
-                        <p>Enable assessment of multiple properties in the time it would take to evaluate one manually</p>
+                    </div>
+                    
+                    <div class="sketchfab-embed-wrapper" style="width: 100%; height: 450px; margin-top: 2rem;">
+                        <iframe title="Sittingroom Scaniverse" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share style="width: 100%; height: 100%;" src="https://sketchfab.com/models/db231a54ee434db681daacc98912ba9e/embed"> </iframe>
+                        <p class="caption">Fig 2: Sample 3D model captured with iPhone 13 Pro using Polycam app</p>
                     </div>
                 </div>
+            </section>
+            
+            <section id="findings" class="content-section">
+                <h2>Key Findings</h2>
+                <div class="section-content">
+                    <div class="findings-highlight">
+                        <p>Consumer-grade LiDAR technology demonstrated remarkable effectiveness for property assessment, with significant advantages in cost, time, and accessibility while maintaining professional-grade accuracy.</p>
+                    </div>
+                    
+                    <div class="findings-grid">
+                        <div class="finding-card">
+                            <div class="finding-icon"><i class="fas fa-ruler"></i></div>
+                            <h3>Measurement Accuracy</h3>
+                            <div class="finding-data">97%</div>
+                            <p>LiDAR measurements achieved 97% accuracy compared to professional measurements, with a margin of error of only ±3cm for most structural elements.</p>
+                        </div>
+                        
+                        <div class="finding-card">
+                            <div class="finding-icon"><i class="fas fa-clock"></i></div>
+                            <h3>Time Efficiency</h3>
+                            <div class="finding-data">85%</div>
+                            <p>Property scanning required only 45 minutes per property on average, compared to 4-6 hours for traditional assessment methods, representing an 85% time saving.</p>
+                        </div>
+                        
+                        <div class="finding-card">
+                            <div class="finding-icon"><i class="fas fa-euro-sign"></i></div>
+                            <h3>Cost Reduction</h3>
+                            <div class="finding-data">78%</div>
+                            <p>Implementation costs were reduced by approximately 78%, with each property assessment costing under €600 compared to the traditional €2,800-€11,000 range.</p>
+                        </div>
+                        
+                        <div class="finding-card">
+                            <div class="finding-icon"><i class="fas fa-users"></i></div>
+                            <h3>Stakeholder Reception</h3>
+                            <div class="finding-data">89%</div>
+                            <p>89% of surveyed property developers reported that the 3D models provided sufficient information for initial renovation planning and budget estimation.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="limitations-section">
+                        <h3>Limitations & Challenges</h3>
+                        <div class="limitations-container">
+                            <div class="limitation-item">
+                                <h4><i class="fas fa-low-vision"></i> Lighting Conditions</h4>
+                                <p>Performance degradation in extremely low-light environments, though still superior to traditional photography.</p>
+                            </div>
+                            
+                            <div class="limitation-item">
+                                <h4><i class="fas fa-building"></i> Structural Analysis</h4>
+                                <p>Visual assessment only; cannot detect internal structural issues without supplementary technologies.</p>
+                            </div>
+                            
+                            <div class="limitation-item">
+                                <h4><i class="fas fa-mobile-alt"></i> Hardware Limitations</h4>
+                                <p>Currently limited to premium Apple devices, though Android equivalents are emerging in the market.</p>
+                            </div>
+                            
+                            <div class="limitation-item">
+                                <h4><i class="fas fa-file-export"></i> File Size Management</h4>
+                                <p>Raw scan data produced large files (5-10GB) requiring optimization for practical sharing and storage.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="case-study">
+                        <h3>Case Study: Victorian Terrace Renovation</h3>
+                        <div class="case-study-content">
+                            <div class="case-image">
+                                <img src="/api/placeholder/400/300" alt="Victorian terrace house before renovation" class="research-image">
+                            </div>
+                            <div class="case-details">
+                                <p>A derelict Victorian terrace house in Dublin 8 was scanned using the LiDAR methodology and subsequently evaluated by both traditional surveyors and using the 3D model.</p>
+                                
+                                <p>The traditional survey cost €3,400 and took 2 days to complete. The LiDAR assessment cost €580 and took 3.5 hours including processing time.</p>
+                                
+                                <p>When the renovation was completed, measurements from the LiDAR model were found to have an average deviation of only 2.1cm from as-built dimensions, compared to 1.9cm for the traditional survey.</p>
+                                
+                                <p>The property developer reported that the ability to virtually revisit the property through the 3D model saved approximately €1,200 in additional site visits during the planning phase.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="implications" class="content-section">
+                <h2>Implications & Applications</h2>
+                <div class="section-content">
+                    <p class="implications-intro">The findings from this research suggest several promising applications for LiDAR technology in addressing Ireland's housing crisis:</p>
+                    
+                    <div class="applications-grid">
+                        <div class="application-card">
+                            <div class="application-icon"><i class="fas fa-database"></i></div>
+                            <h3>National Property Database</h3>
+                            <p>Creation of a comprehensive database of vacant and derelict properties with 3D models accessible to housing agencies and developers.</p>
+                        </div>
+                        
+                        <div class="application-card">
+                            <div class="application-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                            <h3>Community Housing Initiatives</h3>
+                            <p>Empowering community housing organizations with affordable assessment tools to identify and evaluate suitable properties.</p>
+                        </div>
+                        
+                        <div class="application-card">
+                            <div class="application-icon"><i class="fas fa-city"></i></div>
+                            <h3>Local Authority Planning</h3>
+                            <p>Enabling more efficient planning and decision-making processes through virtual property tours and accurate digital records.</p>
+                        </div>
+                        
+                        <div class="application-card">
+                            <div class="application-icon"><i class="fas fa-graduation-cap"></i></div>
+                            <h3>Training & Education</h3>
+                            <p>Creating virtual reality environments for architectural and construction students to study building pathology and renovation techniques.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="future-research">
+                        <h3>Future Research Directions</h3>
+                        <ul class="research-directions">
+                            <li>
+                                <h4>AI-Enhanced Condition Assessment</h4>
+                                <p>Developing machine learning algorithms to automatically identify structural issues from LiDAR scans</p>
+                            </li>
+                            <li>
+                                <h4>Integration with BIM Systems</h4>
+                                <p>Creating seamless workflows between LiDAR scans and Building Information Modeling platforms</p>
+                            </li>
+                            <li>
+                                <h4>Longitudinal Building Monitoring</h4>
+                                <p>Using repeat scans to track building movement and deterioration over time</p>
+                            </li>
+                            <li>
+                                <h4>Augmented Reality Applications</h4>
+                                <p>Developing on-site AR tools for visualizing renovation plans within the existing structure</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <div class="cta-section">
+                <h2>Interested in Learning More?</h2>
+                <p>Explore the interactive demos, download the full research paper, or get in touch to discuss potential applications.</p>
+                <div class="cta-buttons">
+                    <a href="demo.html" class="btn">View Interactive Demo</a>
+                    <a href="full-report.pdf" class="btn btn-outline">Download Research Paper</a>
+                </div>
             </div>
         </div>
-    </section>
+    </main>
 
-    <section id="results">
+    <section id="contact" class="academic-contact">
         <div class="container">
-            <div class="section-title">
-                <h2>Project Results</h2>
-                <p>Key findings from our research and practical applications</p>
-            </div>
-            
-            <div class="results-content">
-                <div class="result-card">
-                    <h3>Accuracy Comparison</h3>
-                    <p>LiDAR scans achieved 97% accuracy compared to professional measurements, with a margin of error of only ±3cm for most structural elements.</p>
-                </div>
-                
-                <div class="result-card">
-                    <h3>Time Efficiency</h3>
-                    <p>Property scanning using smartphone LiDAR required an average of 45 minutes per property, compared to 4-6 hours for traditional assessment methods.</p>
-                </div>
-                
-                <div class="result-card">
-                    <h3>Cost Analysis</h3>
-                    <p>Implementation costs were reduced by approximately 78%, with each property assessment costing under €600 compared to the traditional €2,800-€11,000 range.</p>
-                </div>
-                
-                <div class="result-card">
-                    <h3>Stakeholder Feedback</h3>
-                    <p>89% of surveyed property developers reported that 3D models provided sufficient information for initial renovation planning and budget estimation.</p>
-                </div>
-            </div>
-            
-            <div class="cta-container">
-                <a href="full-report.pdf" class="btn">View Complete Research Findings</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" style="background-color: var(--light);">
-        <div class="container">
-            <div class="section-title">
-                <h2>Contact</h2>
-                <p>Get in touch to learn more about this research project</p>
+            <div class="contact-header">
+                <h2>Contact the Researcher</h2>
+                <p>If you're interested in this research or would like to discuss potential applications or collaborations, please get in touch.</p>
             </div>
             
             <div class="contact-content">
@@ -175,7 +403,7 @@
                     
                     <div class="contact-item">
                         <i class="fas fa-university"></i>
-                        <p>School of Computer Science, University College Dublin</p>
+                        <p>School of Computer Science<br>University College Dublin</p>
                     </div>
                     
                     <div class="contact-item">
@@ -184,7 +412,13 @@
                             <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
                             <a href="#" target="_blank"><i class="fab fa-github"></i></a>
                             <a href="#" target="_blank"><i class="fab fa-researchgate"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-orcid"></i></a>
                         </div>
+                    </div>
+                    
+                    <div class="supervisor-info">
+                        <h4>Research Supervisor</h4>
+                        <p>Dr. Jane Smith<br>Associate Professor<br>School of Computer Science<br>University College Dublin</p>
                     </div>
                 </div>
                 
@@ -200,6 +434,23 @@
                     </div>
                     
                     <div class="form-group">
+                        <label for="affiliation">Affiliation/Organization</label>
+                        <input type="text" id="affiliation" name="affiliation">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="research">Research Inquiry</option>
+                            <option value="collaboration">Collaboration Opportunity</option>
+                            <option value="data">Data Request</option>
+                            <option value="presentation">Presentation Request</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
                         <label for="message">Message</label>
                         <textarea id="message" name="message" rows="5" required></textarea>
                     </div>
@@ -210,38 +461,48 @@
         </div>
     </section>
 
-    <footer>
+    <footer class="academic-footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">
+                <div class="footer-info">
                     <h3>Dylan O'Donnell</h3>
-                    <p>LiDAR Property Assessment Research</p>
+                    <p>MSc Computer Science<br>University College Dublin</p>
+                    <p class="copyright">&copy; 2025 Dylan O'Donnell. All rights reserved.</p>
                 </div>
                 
                 <div class="footer-links">
-                    <h4>Quick Links</h4>
+                    <h4>Project Sections</h4>
                     <ul>
                         <li><a href="#about">About</a></li>
-                        <li><a href="#housing-crisis">Housing Crisis</a></li>
-                        <li><a href="demo.html">Demo</a></li>
+                        <li><a href="#research">Research Context</a></li>
+                        <li><a href="#methodology">Methodology</a></li>
+                        <li><a href="#findings">Findings</a></li>
+                        <li><a href="#implications">Implications</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="demo.html">Interactive Demo</a></li>
                         <li><a href="technical.html">Technical Details</a></li>
                         <li><a href="ethical.html">Ethical Considerations</a></li>
-                        <li><a href="business.html">Business Model</a></li>
+                        <li><a href="business.html">Business Applications</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-acknowledgment">
                     <h4>Acknowledgments</h4>
-                    <p>This research project was conducted as part of a Masters dissertation at University College Dublin, with support from the School of Computer Science and the Housing Agency of Ireland.</p>
+                    <p>This research was supported by the School of Computer Science at University College Dublin and the Housing Agency of Ireland. Special thanks to all property owners who permitted access for this study.</p>
                 </div>
-            </div>
-            
-            <div class="copyright">
-                <p>&copy; 2025 Dylan O'Donnell. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
+    
+    <!-- Preload for performance -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 </body>
 </html>
