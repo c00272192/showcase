@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Details | LiDAR Property Assessment</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">DylanOD</a>
+            <ul class="nav-links">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#housing-crisis">Housing Crisis</a></li>
+                <li><a href="demo.html">Demo</a></li>
+                <li><a href="index.html#results">Results</a></li>
+                <li><a href="technical.html">Technical</a></li>
+                <li><a href="ethical.html">Ethical</a></li>
+                <li><a href="business.html">Business</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>Technical Details</h1>
+            <p>The technology and methodologies behind LiDAR property assessment</p>
+        </div>
+    </div>
+
+    <section class="technical-section">
+        <div class="container">
+            <div class="technical-overview">
+                <h2>Technical Approach</h2>
+                <p>This research project explores the viability of consumer-grade LiDAR and photogrammetry for professional property assessment. The technical implementation involves several key components and processes that enable accurate, accessible documentation of derelict properties.</p>
+            </div>
+
+            <div class="technical-details">
+                <div class="technical-card">
+                    <h3>Hardware Used</h3>
+                    <ul>
+                        <li><strong>iPhone 13 Pro</strong> - Primary LiDAR scanning device</li>
+                        <li><strong>iPad Pro 12.9" (2021)</strong> - Secondary scanning device for comparison</li>
+                        <li><strong>Leica Disto X4</strong> - Professional laser measuring tool for validation</li>
+                        <li><strong>MacBook Pro M1</strong> - For processing and model optimization</li>
+                    </ul>
+                </div>
+
+                <div class="technical-card">
+                    <h3>Software Stack</h3>
+                    <ul>
+                        <li><strong>Polycam</strong> - iOS app for LiDAR scanning and initial model creation</li>
+                        <li><strong>Scaniverse</strong> - Alternative iOS app used for comparative scanning</li>
+                        <li><strong>Meshroom</strong> - Photogrammetry processing software</li>
+                        <li><strong>Blender</strong> - 3D model optimization and cleanup</li>
+                        <li><strong>Sketchfab</strong> - Web platform for hosting and sharing 3D models</li>
+                    </ul>
+                </div>
+
+                <div class="technical-card" id="tutorial">
+                    <h3>Scanning Methodology</h3>
+                    <ol>
+                        <li><strong>Pre-scan preparation</strong> - Property cleanup, lighting setup, reference markers</li>
+                        <li><strong>Systematic scanning</strong> - Room-by-room approach with 25% overlap between scans</li>
+                        <li><strong>Detail capture</strong> - Special attention to architectural features and structural damage</li>
+                        <li><strong>Validation measurements</strong> - Taking reference measurements with traditional tools</li>
+                        <li><strong>Post-processing</strong> - Model cleanup, alignment, and optimization</li>
+                    </ol>
+                </div>
+
+                <div class="technical-card">
+                    <h3>Data Processing Pipeline</h3>
+                    <p>Raw scan data undergoes several processing stages:</p>
+                    <ol>
+                        <li><strong>Initial scan registration</strong> - Aligning multiple scans into cohesive model</li>
+                        <li><strong>Noise reduction</strong> - Removing scanning artifacts and outliers</li>
+                        <li><strong>Mesh optimization</strong> - Reducing polygon count while preserving detail</li>
+                        <li><strong>Texture mapping</strong> - Applying photographic data to 3D geometry</li>
+                        <li><strong>File conversion</strong> - Preparing optimized files for web delivery</li>
+                        <li><strong>Annotation</strong> - Adding measurement points and condition notes</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="technical-challenges">
+                <h2>Challenges & Solutions</h2>
+                <div class="challenge-grid">
+                    <div class="challenge-card">
+                        <h3>Low Light Conditions</h3>
+                        <p><strong>Challenge:</strong> Many derelict properties lack electricity, creating dark scanning environments.</p>
+                        <p><strong>Solution:</strong> Utilized LiDAR's infrared capabilities supplemented with portable battery-powered LED panels for critical areas.</p>
+                    </div>
+
+                    <div class="challenge-card">
+                        <h3>Reflective Surfaces</h3>
+                        <p><strong>Challenge:</strong> Windows and mirrored surfaces causing scanning artifacts.</p>
+                        <p><strong>Solution:</strong> Temporary application of non-reflective coverings and algorithmic cleaning in post-processing.</p>
+                    </div>
+
+                    <div class="challenge-card">
+                        <h3>Complex Geometries</h3>
+                        <p><strong>Challenge:</strong> Ornate architectural details failing to scan accurately.</p>
+                        <p><strong>Solution:</strong> Supplemental photogrammetry capture and manual model adjustment for complex features.</p>
+                    </div>
+
+                    <div class="challenge-card">
+                        <h3>Data Size Management</h3>
+                        <p><strong>Challenge:</strong> Raw scans producing extremely large files (5-10GB per property).</p>
+                        <p><strong>Solution:</strong> Developed a decimation workflow that preserves critical measurements while reducing file size by up to 85%.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="technical-future">
+                <h2>Future Technical Developments</h2>
+                <p>This research has identified several promising directions for future technical improvements:</p>
+                <ul>
+                    <li>Integration with Building Information Modeling (BIM) platforms for direct import</li>
+                    <li>Automated structural damage detection using machine learning algorithms</li>
+                    <li>Development of a measurement API for programmatic access to dimensional data</li>
+                    <li>Cloud-based processing to reduce hardware requirements</li>
+                    <li>Implementation of augmented reality visualization for on-site assessment</li>
+                </ul>
+            </div>
+
+            <div class="cta-container">
+                <a href="full-report.pdf" class="btn">Download Technical Specifications</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Dylan O'Donnell</h3>
+                    <p>LiDAR Property Assessment Research</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#housing-crisis">Housing Crisis</a></li>
+                        <li><a href="demo.html">Demo</a></li>
+                        <li><a href="technical.html">Technical Details</a></li>
+                        <li><a href="ethical.html">Ethical Considerations</a></li>
+                        <li><a href="business.html">Business Model</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-acknowledgment">
+                    <h4>Acknowledgments</h4>
+                    <p>This research project was conducted as part of a Masters dissertation at University College Dublin, with support from the School of Computer Science and the Housing Agency of Ireland.</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Dylan O'Donnell. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
