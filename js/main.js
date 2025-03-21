@@ -333,7 +333,195 @@ document.addEventListener('DOMContentLoaded', function() {
         window.addEventListener('resize', checkScreenSize);
         checkScreenSize();
     };
+    // Add this to your main.js or create a new demo.js file
+document.addEventListener('DOMContentLoaded', function() {
+    // Toggle between table and chart views
+    const toggleTable = document.getElementById('toggleTable');
+    const toggleChart = document.getElementById('toggleChart');
+    const tableView = document.getElementById('tableView');
+    const chartView = document.getElementById('chartView');
     
+    if (toggleTable && toggleChart && tableView && chartView) {
+        toggleTable.addEventListener('click', function() {
+            toggleTable.classList.add('active');
+            toggleChart.classList.remove('active');
+            tableView.style.display = 'block';
+            chartView.style.display = 'none';
+        });
+        
+        toggleChart.addEventListener('click', function() {
+            toggleChart.classList.add('active');
+            toggleTable.classList.remove('active');
+            chartView.style.display = 'block';
+            tableView.style.display = 'none';
+            
+            // Create chart if it hasn't been created yet
+            if (!chartCreated) {
+                createAccuracyChart();
+                chartCreated = true;
+            }
+        });
+    }
+    
+    // Chart creation flag
+    let chartCreated = false;
+    
+    // Create accuracy chart using basic canvas drawing
+    function createAccuracyChart() {
+        const chartContainer = document.getElementById('accuracyChartContainer');
+        
+        if (!chartContainer) return;
+        
+        // Create canvas element
+        const canvas = document.createElement('canvas');
+        canvas.width = chartContainer.clientWidth;
+        canvas.height = chartContainer.clientHeight;
+        chartContainer.appendChild(canvas);
+        
+        const ctx = canvas.getContext('2d');
+        
+        // Chart data from the table
+        const measurementNames = [
+            'Room Width', 
+            'Room Length', 
+            'Ceiling Height', 
+            'Door Frame', 
+            'Window Height',
+            'Average'
+        ];
+        
+        const accuracyPercentages = [99.91, 99.89, 99.82, 99.78, 99.37, 99.75];
+        
+        // Chart settings
+        const chartMargin = { top: 30, right: 30, bottom: 50, left: 60 };
+        const chartWidth = canvas.width - chartMargin.left - chartMargin.right;
+        const chartHeight = canvas.height - chartMargin.top - chartMargin.bottom;
+        
+        // Clear canvas
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        // Set some styling
+        ctx.fillStyle = '#f8fafc';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        
+        // Draw chart title
+        ctx.font = 'bold 16px Inter, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillStyle = '#1e293b';
+        ctx.fillText('Measurement Accuracy Comparison', canvas.width / 2, 20);
+        
+        // Draw y-axis
+        ctx.beginPath();
+        ctx.moveTo(chartMargin.left, chartMargin.top);
+        ctx.lineTo(chartMargin.left, chartHeight + chartMargin.top);
+        ctx.strokeStyle = '#64748b';
+        ctx.lineWidth = 1;
+        ctx.stroke();
+        
+        // Draw x-axis
+        ctx.beginPath();
+        ctx.moveTo(chartMargin.left, chartHeight + chartMargin.top);
+        ctx.lineTo(chartWidth + chartMargin.left, chartHeight + chartMargin.top);
+        ctx.stroke();
+        
+        // Draw y-axis grid lines and labels
+        ctx.font = '10px Inter, sans-serif';
+        ctx.textAlign = 'right';
+        ctx.fillStyle = '#64748b';
+        
+        // We'll show from 99% to 100% for better visualization of small differences
+        for (let i = 0; i <= 10; i++) {
+            const y = chartHeight + chartMargin.top - (i * (chartHeight / 10));
+            const value = 99 + (i / 10);
+            
+            // Grid line
+            ctx.beginPath();
+            ctx.moveTo(chartMargin.left, y);
+            ctx.lineTo(chartWidth + chartMargin.left, y);
+            ctx.strokeStyle = 'rgba(100, 116, 139, 0.1)';
+            ctx.stroke();
+            
+            // Label
+            ctx.fillText(value.toFixed(1) + '%', chartMargin.left - 10, y + 4);
+        }
+        
+        // Y-axis title
+        ctx.save();
+        ctx.translate(20, chartHeight / 2 + chartMargin.top);
+        ctx.rotate(-Math.PI / 2);
+        ctx.textAlign = 'center';
+        ctx.font = 'bold 12px Inter, sans-serif';
+        ctx.fillText('Accuracy', 0, 0);
+        ctx.restore();
+        
+        // Draw bars
+        const barWidth = (chartWidth / measurementNames.length) * 0.7;
+        const barSpacing = (chartWidth / measurementNames.length) * 0.3;
+        
+        for (let i = 0; i < measurementNames.length; i++) {
+            const x = chartMargin.left + (i * (barWidth + barSpacing)) + (barSpacing / 2);
+            
+            // Calculate height (scaled to show 99-100% range)
+            const barHeightPercent = (accuracyPercentages[i] - 99) * 10; // Scale the 0.1%-1% range to 0-100%
+            const barHeight = (barHeightPercent / 100) * chartHeight;
+            
+            // Bar
+            ctx.fillStyle = i === measurementNames.length - 1 ? '#2563eb' : '#4f46e5';
+            ctx.fillRect(x, chartHeight + chartMargin.top - barHeight, barWidth, barHeight);
+            
+            // Label
+            ctx.fillStyle = '#1e293b';
+            ctx.textAlign = 'center';
+            ctx.font = '10px Inter, sans-serif';
+            
+            // Rotate and position x-axis labels
+            ctx.save();
+            ctx.translate(x + barWidth / 2, chartHeight + chartMargin.top + 10);
+            ctx.rotate(Math.PI / 4); // 45-degree angle
+            ctx.fillText(measurementNames[i], 0, 0);
+            ctx.restore();
+            
+            // Value on top of bar
+            ctx.fillStyle = '#2563eb';
+            ctx.textAlign = 'center';
+            ctx.font = 'bold 10px Inter, sans-serif';
+            ctx.fillText(
+                accuracyPercentages[i].toFixed(2) + '%', 
+                x + barWidth / 2, 
+                chartHeight + chartMargin.top - barHeight - 5
+            );
+        }
+        
+        // Add a note about scale
+        ctx.fillStyle = '#64748b';
+        ctx.textAlign = 'right';
+        ctx.font = 'italic 10px Inter, sans-serif';
+        ctx.fillText('Note: Y-axis shows 99%-100% range', canvas.width - 10, canvas.height - 10);
+    }
+    
+    // Initialize interactions for model control buttons
+    const controlButtons = document.querySelectorAll('.control-button');
+    
+    controlButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // This would actually control the model in a production environment
+            // For now, just add a visual feedback
+            this.classList.add('active');
+            
+            // Remove active class after a brief delay
+            setTimeout(() => {
+                this.classList.remove('active');
+            }, 300);
+            
+            // Alert user that this is a demo feature
+            if (!this.hasAttribute('data-clicked')) {
+                this.setAttribute('data-clicked', 'true');
+                const featureName = this.textContent.trim();
+                alert(`The ${featureName} feature would control the 3D model in a production environment. This is a demonstration of the UI.`);
+            }
+        });
+    });
+});
     // Initialize mobile navigation
     createMobileNav();
     
@@ -438,4 +626,5 @@ document.head.insertAdjacentHTML('beforeend', `
             width: 100% !important;
         }
     </style>
+    
 `);

@@ -8,15 +8,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="academic-theme">
     <header>
         <nav>
-            <a href="index.html" class="logo">DylanOD</a>
+            <a href="index.html" class="logo">dylan<span>@</span>setu</a>
             <ul class="nav-links">
                 <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#housing-crisis">Housing Crisis</a></li>
                 <li><a href="demo.html">Demo</a></li>
-                <li><a href="index.html#results">Results</a></li>
                 <li><a href="technical.html">Technical</a></li>
                 <li><a href="ethical.html">Ethical</a></li>
                 <li><a href="business.html">Business</a></li>
@@ -27,160 +25,245 @@
 
     <div class="page-header">
         <div class="container">
-            <h1>Interactive Demo</h1>
-            <p>Explore 3D models created using smartphone LiDAR and photogrammetry technology</p>
+           
+            <p></p>
         </div>
     </div>
 
-    <section class="demo-section">
-        <div class="container">
-            <div class="demo-intro">
-                <h2>Explore Our 3D Property Models</h2>
-                <p>Below you'll find interactive 3D models of derelict properties in Ireland captured using consumer-grade LiDAR technology. These models demonstrate how accessible technology can be used to document and assess abandoned buildings for potential renovation and repurposing.</p>
-                <p>You can interact with each model by:</p>
-                <ul>
-                    <li>Clicking and dragging to rotate the view</li>
-                    <li>Scrolling to zoom in and out</li>
-                    <li>Right-clicking and dragging to pan the view</li>
-                    <li>Using the toolbar on the bottom of each viewer for additional options</li>
+    <main class="academic-layout">
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <h3>Demo Contents</h3>
+                <ul class="sidebar-nav">
+                    <li><a href="#3d-models">3D Property Models</a></li>
+                    <li><a href="#video-demo">Video Walkthrough</a></li>
+                    <li><a href="#measurement-comparison">Measurement Comparison</a></li>
                 </ul>
-            </div>
-
-            <div class="demo-grid">
-                <div class="demo-item">
-                    <h3>Victorian Terrace House - Dublin</h3>
-                    <div class="model-wrapper" style="height: 500px;">
-                        <iframe title="Victorian Terrace House LiDAR Scan" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share style="width: 100%; height: 100%;" src="https://sketchfab.com/models/db231a54ee434db681daacc98912ba9e/embed"></iframe>
-                    </div>
-                    <div class="model-details">
-                        <p><strong>Scan Time:</strong> 42 minutes</p>
-                        <p><strong>Building Type:</strong> 1890s Victorian terrace house</p>
-                        <p><strong>Condition:</strong> Moderate deterioration, structural integrity maintained</p>
-                        <p><strong>Key Features:</strong> Original moldings, fireplace features, period staircase</p>
-                    </div>
-                </div>
-
-                <div class="demo-item">
-                    <h3>Rural Cottage - County Kerry</h3>
-                    <div class="model-wrapper" style="height: 500px;">
-                        <iframe title="Rural Cottage LiDAR Scan" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share style="width: 100%; height: 100%;" src="https://sketchfab.com/models/db231a54ee434db681daacc98912ba9e/embed"></iframe>
-                    </div>
-                    <div class="model-details">
-                        <p><strong>Scan Time:</strong> 37 minutes</p>
-                        <p><strong>Building Type:</strong> Traditional Irish cottage, circa 1920s</p>
-                        <p><strong>Condition:</strong> Significant roof damage, walls generally stable</p>
-                        <p><strong>Key Features:</strong> Stone construction, traditional layout, attached outbuilding</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="comparison-section">
-                <h2>Accuracy Comparison: LiDAR vs Traditional Measurement</h2>
-                <p>The table below compares measurements taken using traditional methods against those obtained from LiDAR scans. The analysis demonstrates the high degree of accuracy achieved with consumer-grade technology.</p>
                 
-                <div class="table-responsive">
-                    <table class="academic-table">
-                        <thead>
-                            <tr>
-                                <th>Measurement</th>
-                                <th>Traditional Method (cm)</th>
-                                <th>LiDAR Scan (cm)</th>
-                                <th>Difference (cm)</th>
-                                <th>Accuracy (%)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Room Width (Living Room)</td>
-                                <td>426.2</td>
-                                <td>425.8</td>
-                                <td>0.4</td>
-                                <td class="success-value">99.91%</td>
-                            </tr>
-                            <tr>
-                                <td>Room Length (Living Room)</td>
-                                <td>531.5</td>
-                                <td>530.9</td>
-                                <td>0.6</td>
-                                <td class="success-value">99.89%</td>
-                            </tr>
-                            <tr>
-                                <td>Ceiling Height</td>
-                                <td>283.7</td>
-                                <td>284.2</td>
-                                <td>0.5</td>
-                                <td class="success-value">99.82%</td>
-                            </tr>
-                            <tr>
-                                <td>Door Frame Width</td>
-                                <td>92.3</td>
-                                <td>92.1</td>
-                                <td>0.2</td>
-                                <td class="success-value">99.78%</td>
-                            </tr>
-                            <tr>
-                                <td>Window Height</td>
-                                <td>143.8</td>
-                                <td>142.9</td>
-                                <td>0.9</td>
-                                <td class="success-value">99.37%</td>
-                            </tr>
-                            <tr class="highlight-row">
-                                <td><strong>Average</strong></td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td><strong>0.52</strong></td>
-                                <td class="success-value"><strong>99.75%</strong></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p class="table-caption">Table 1: Comparison of measurements from 5 key structural elements in the Victorian Terrace case study.</p>
+                <h3>Quick Stats</h3>
+                <div class="stat-highlight">
+                    <span class="stat-number">99.75%</span>
+                    <span class="stat-desc">Average accuracy of LiDAR measurements</span>
+                </div>
+                <div class="stat-highlight">
+                    <span class="stat-number">42 min</span>
+                    <span class="stat-desc">Average scan time per property</span>
+                </div>
+                <div class="stat-highlight">
+                    <span class="stat-number">±0.52cm</span>
+                    <span class="stat-desc">Average measurement deviation</span>
+                </div>
+                
+                <div class="download-section">
+                    <h3>Resources</h3>
+                    <a href="full-report.pdf" class="download-link"><i class="fas fa-file-pdf"></i> Full Research Report</a>
+                    <a href="technical.html#tutorial" class="download-link"><i class="fas fa-book"></i> Scanning Tutorial</a>
                 </div>
             </div>
+        </aside>
 
-            <div class="demo-cta">
+        <div class="content-area">
+            <section id="3d-models" class="content-section">
+                <h2>Explore Our 3D Property Models</h2>
+                <div class="section-content">
+                    <p class="lead-paragraph">Below you'll find interactive 3D models of derelict properties in Ireland captured using consumer-grade LiDAR technology. These models demonstrate how accessible technology can be used to document and assess abandoned buildings for potential renovation and repurposing.</p>
+                    
+                    <div class="two-column">
+                        <div>
+                            <p>You can interact with each model by:</p>
+                            <ul class="academic-list">
+                                <li>Clicking and dragging to rotate the view</li>
+                                <li>Scrolling to zoom in and out</li>
+                                <li>Right-clicking and dragging to pan the view</li>
+                                <li>Using the toolbar on the bottom of each viewer for additional options</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <blockquote>
+                                "3D scanning technology transforms property assessment by providing accurate, comprehensive documentation that minimises uncertainty in renovation planning."
+                                <cite>- Dylan O'Donnell, 2025</cite>
+                            </blockquote>
+                        </div>
+                    </div>
+                    
+                    <div class="demo-item">
+                        <h3>Derelict Bungalow - Carlow</h3>
+                        <div class="model-wrapper" style="width: 100%; height: 450px; margin-top: 2rem;">
+                            <iframe title="Derelict Bungalow LiDAR Scan" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share style="width: 100%; height: 100%;" src="https://sketchfab.com/models/db231a54ee434db681daacc98912ba9e/embed"></iframe>
+                        </div>
+                        <p class="caption">Fig 1: 3D model of derelict bungalow in Carlow captured with iPhone using LiDAR technology</p>
+                        
+                        <div class="model-details" style="margin-top: 1.5rem; background-color: var(--light); padding: 1.5rem; border-radius: 8px;">
+                            <p><strong>Scan Time:</strong> 42 minutes</p>
+                            <p><strong>Building Type:</strong> Early 1900's Derelict Cottage</p>
+                            <p><strong>Condition:</strong> Moderate deterioration, structural integrity maintained</p>
+                            <p><strong>Key Features:</strong> Original moldings, fireplace features, period staircase</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="video-demo" class="content-section">
+                <h2>Video Walkthrough Demo</h2>
+                <div class="section-content">
+                    <p class="lead-paragraph">Watch a video demonstration of the LiDAR scanning process and see how the technology works in real-time.</p>
+                    
+                    <div style="text-align: center; margin: 2rem 0;">
+                        <a href="https://youtu.be/example-lidar-demo" class="btn" target="_blank">
+                            <i class="fas fa-play-circle" style="margin-right: 0.5rem;"></i>
+                            Watch Video Demo
+                        </a>
+                    </div>
+                    
+                    <div class="tools-used">
+                        <h3>Equipment Used in Demo</h3>
+                        <div class="tools-grid">
+                            <div class="tool-item">
+                                <i class="fas fa-mobile-alt"></i>
+                                <h4>iPhone 16 Pro</h4>
+                                <p>Primary LiDAR capture device</p>
+                            </div>
+
+                            <div class="tool-item">
+                                <i class="fas fa-cube"></i>
+                                <h4>Polycam App</h4>
+                                <p>LiDAR scanning software</p>
+                            </div>
+                            
+                            <div class="tool-item">
+                                <i class="fas fa-ruler-combined"></i>
+                                <h4>Blender</h4>
+                                <p>For construction snagging</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="measurement-comparison" class="content-section">
+                <h2>Accuracy Comparison: LiDAR vs Traditional Measurement</h2>
+                <div class="section-content">
+                    <p class="lead-paragraph">The table below compares measurements taken using traditional methods against those obtained from LiDAR scans. The analysis demonstrates the high degree of accuracy achieved with consumer-grade technology.</p>
+                    
+                    <div class="table-responsive" style="margin: 2rem 0; border-radius: 8px; overflow: hidden; box-shadow: var(--shadow);">
+                        <table class="academic-table">
+                            <thead>
+                                <tr>
+                                    <th>Measurement</th>
+                                    <th>Traditional Method (cm)</th>
+                                    <th>LiDAR Scan (cm)</th>
+                                    <th>Difference (cm)</th>
+                                    <th>Accuracy (%)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Room Width (Living Room)</td>
+                                    <td>426.2</td>
+                                    <td>425.8</td>
+                                    <td>0.4</td>
+                                    <td class="success-value">99.91%</td>
+                                </tr>
+                                <tr>
+                                    <td>Room Length (Living Room)</td>
+                                    <td>531.5</td>
+                                    <td>530.9</td>
+                                    <td>0.6</td>
+                                    <td class="success-value">99.89%</td>
+                                </tr>
+                                <tr>
+                                    <td>Ceiling Height</td>
+                                    <td>283.7</td>
+                                    <td>284.2</td>
+                                    <td>0.5</td>
+                                    <td class="success-value">99.82%</td>
+                                </tr>
+                                <tr>
+                                    <td>Door Frame Width</td>
+                                    <td>92.3</td>
+                                    <td>92.1</td>
+                                    <td>0.2</td>
+                                    <td class="success-value">99.78%</td>
+                                </tr>
+                                <tr>
+                                    <td>Window Height</td>
+                                    <td>143.8</td>
+                                    <td>142.9</td>
+                                    <td>0.9</td>
+                                    <td class="success-value">99.37%</td>
+                                </tr>
+                                <tr class="highlight-row">
+                                    <td><strong>Average</strong></td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td><strong>0.52</strong></td>
+                                    <td class="success-value"><strong>99.75%</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="caption">Table 1: Comparison of measurements from 5 key structural elements in the Bungalow case study.</p>
+                    
+                    <div class="findings-highlight" style="margin-top: 2rem;">
+                        <p>The average deviation of only 0.52cm between traditional and LiDAR measurements demonstrates that consumer technology can achieve professional-grade accuracy for property assessment purposes.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <div class="cta-section">
                 <h2>Experience the Technology Yourself</h2>
                 <p>Interested in trying this technology on your own properties? We've prepared detailed instructions on how to conduct your own LiDAR scans using consumer-grade technology.</p>
                 <div class="cta-buttons">
                     <a href="technical.html#tutorial" class="btn">View Tutorial</a>
-                    <a href="full-report.pdf" class="btn btn-outline">Download Full Research Report</a>
+                    <a href="full-report.pdf" class="btn btn-outline">Download Research Report</a>
                 </div>
             </div>
         </div>
-    </section>
+    </main>
 
-    <footer>
+    <footer class="academic-footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">
+                <div class="footer-info">
                     <h3>Dylan O'Donnell</h3>
-                    <p>LiDAR Property Assessment Research</p>
+                    <p>Bachelor of Honours<br>South East Technological University</p>
+                    <p class="copyright">&copy; 2025 Dylan O'Donnell. All rights reserved.</p>
                 </div>
                 
                 <div class="footer-links">
-                    <h4>Quick Links</h4>
+                    <h4>Project Sections</h4>
                     <ul>
                         <li><a href="index.html#about">About</a></li>
-                        <li><a href="index.html#housing-crisis">Housing Crisis</a></li>
-                        <li><a href="demo.html">Demo</a></li>
+                        <li><a href="index.html#research">Research Context</a></li>
+                        <li><a href="index.html#methodology">Methodology</a></li>
+                        <li><a href="index.html#findings">Findings</a></li>
+                        <li><a href="index.html#implications">Implications</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="demo.html">Interactive Demo</a></li>
                         <li><a href="technical.html">Technical Details</a></li>
                         <li><a href="ethical.html">Ethical Considerations</a></li>
-                        <li><a href="business.html">Business Model</a></li>
+                        <li><a href="business.html">Business Applications</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-acknowledgment">
                     <h4>Acknowledgments</h4>
-                    <p>This research project was conducted as part of a Masters dissertation at University College Dublin, with support from the School of Computer Science and the Housing Agency of Ireland.</p>
+                    <p>This research was supported by the School of Computing at South East Technological University (SETU) Carlow. Special thanks to [Property Owner(s)] for granting access to their properties for this study.</p>
                 </div>
-            </div>
-            
-            <div class="copyright">
-                <p>&copy; 2025 Dylan O'Donnell. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
+    
+    <!-- Preload for performance -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 </body>
 </html>

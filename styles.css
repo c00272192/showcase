@@ -1,7 +1,7 @@
 /* ==============================
    Global Styles for Academic Theme
    ============================== */
-   :root {
+:root {
     --primary: #2563eb;
     --primary-dark: #1e40af;
     --secondary: #4f46e5;
@@ -1153,4 +1153,99 @@ pre code {
     background-color: transparent;
     color: #fff;
     padding: 0;
+}
+/* Enhanced Table Styling - Simple Version */
+.comparison-section {
+    background-color: var(--light);
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 3rem 0;
+    box-shadow: var(--shadow);
+}
+
+.table-responsive {
+    overflow-x: auto;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.academic-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: var(--paper);
+}
+
+.academic-table thead {
+    background-color: var(--primary);
+    color: white;
+}
+
+.academic-table th, 
+.academic-table td {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.academic-table th {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.academic-table tbody tr:hover {
+    background-color: rgba(37, 99, 235, 0.05);
+}
+
+/* Success values styling */
+.success-value {
+    color: var(--success);
+    font-weight: 700;
+}
+
+/* Highlighted row */
+.highlight-row {
+    background-color: rgba(37, 99, 235, 0.08);
+    font-weight: 600;
+}
+
+.highlight-row td {
+    border-top: 2px solid var(--light-gray);
+}
+
+/* Table caption */
+.table-caption {
+    font-size: 0.9rem;
+    color: var(--gray);
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* Video Demo Section */
+.video-demo {
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.video-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+}
+
+.video-link:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.video-link i {
+    font-size: 1.5rem;
 }
