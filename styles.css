@@ -1249,3 +1249,357 @@ pre code {
 .video-link i {
     font-size: 1.5rem;
 }
+/* ==============================
+   Additional Styles for Enhanced UX
+   ============================== */
+
+/* Dark Theme Support */
+body.dark-theme {
+    --primary: #3B82F6;
+    --primary-dark: #1D4ED8;
+    --secondary: #6366F1;
+    --tertiary: #0EA5E9;
+    --accent: #818CF8;
+    --dark: #F8FAFC;
+    --light: #1E293B;
+    --gray: #94A3B8;
+    --light-gray: #334155;
+    --paper: #0F172A;
+    --paper-accent: #1E293B;
+    color: var(--dark);
+    background-color: var(--light);
+}
+
+body.dark-theme .sidebar-content,
+body.dark-theme .content-area {
+    background-color: var(--paper);
+}
+
+body.dark-theme .finding-card,
+body.dark-theme .tool-item,
+body.dark-theme .application-card {
+    background-color: var(--paper-accent);
+}
+
+body.dark-theme blockquote {
+    color: var(--gray);
+}
+
+body.dark-theme header {
+    background-color: rgba(15, 23, 42, 0.98);
+    backdrop-filter: blur(5px);
+}
+
+body.dark-theme .findings-highlight {
+    background-color: var(--paper-accent);
+}
+
+body.dark-theme a {
+    color: var(--primary);
+}
+
+body.dark-theme a:hover {
+    color: var(--primary-dark);
+}
+
+body.dark-theme .nav-links li a {
+    color: rgba(255, 255, 255, 0.85); /* Bright, slightly transparent white instead of var(--light) */
+}
+
+body.dark-theme .academic-table thead {
+    background-color: var(--primary-dark);
+}
+
+body.dark-theme .academic-table tbody tr:hover {
+    background-color: rgba(59, 130, 246, 0.1);
+}
+body.dark-theme .academic-footer {
+    background-color: #0a101e; /* Darker than the main background */
+    color: var(--dark);
+}
+
+body.dark-theme .footer-info p,
+body.dark-theme .footer-acknowledgment p {
+    color: rgba(248, 250, 252, 0.7);
+}
+
+body.dark-theme .footer-links ul li a {
+    color: rgba(248, 250, 252, 0.7);
+}
+
+body.dark-theme .footer-links ul li a:hover {
+    color: #fff;
+}
+
+body.dark-theme .footer-links h4,
+body.dark-theme .footer-acknowledgment h4 {
+    color: rgba(248, 250, 252, 0.9);
+}
+
+body.dark-theme .copyright {
+    color: rgba(248, 250, 252, 0.5);
+}
+
+body.dark-theme .project-tag {
+    color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Ensure the theme switch button appears on all pages */
+.theme-switch {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    cursor: pointer;
+    z-index: 1000; /* Increased z-index to ensure visibility */
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.theme-switch:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+.theme-switch.dark-active {
+    background-color: var(--light);
+    color: var(--primary);
+}
+
+/* Enhanced Header */
+header.scrolled {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+header.header-hidden {
+    transform: translateY(-100%);
+}
+
+/* Active Navigation Styling */
+.nav-links li a.active,
+.sidebar-nav a.active {
+    color: var(--primary) !important;
+    font-weight: 600;
+}
+
+.nav-links li a.active::after {
+    width: 100%;
+}
+
+.sidebar-nav a.active {
+    padding-left: 0.5rem;
+    border-left: 3px solid var(--primary);
+}
+
+/* Form Error States */
+.error {
+    border-color: var(--danger) !important;
+    box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2) !important;
+}
+
+.form-status {
+    padding: 0.75rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.form-status.success {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: var(--success);
+}
+
+.form-status.error {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: var(--danger);
+}
+
+/* Image Zoom Functionality */
+.zoom-indicator {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.research-image {
+    cursor: pointer;
+}
+
+.research-image:hover + .zoom-indicator,
+.zoom-indicator:hover {
+    opacity: 1;
+}
+
+.image-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    cursor: zoom-out;
+}
+
+.zoomed-image {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.overlay-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Enhanced Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease forwards;
+}
+
+/* Page Header Styling */
+.page-header {
+    background: linear-gradient(to right, rgba(30, 41, 59, 0.95), rgba(30, 41, 59, 0.85));
+    color: white;
+    padding: 8rem 0 4rem;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Fixed sidebar for large screens */
+@media (min-width: 1100px) {
+    .academic-layout {
+        position: relative;
+    }
+    
+    .sidebar {
+        position: sticky;
+        top: 100px;
+    }
+}
+
+/* Mobile navigation improvements */
+@media (max-width: 768px) {
+    header {
+        transition: transform 0.3s ease;
+    }
+    
+    nav {
+        padding: 0.5rem 5%;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.98);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        padding: 1rem 0;
+        transform: translateY(-100%);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s ease;
+        z-index: 90;
+    }
+    
+    .nav-links.active {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: all;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: var(--dark);
+        cursor: pointer;
+    }
+   body.dark-theme .nav-links {
+    background-color: rgba(15, 23, 42, 0.98);
+}
+} /* Added missing closing brace for the media query */
+
+/* Dark mode fixes for all primary action buttons */
+body.dark-theme .btn {
+    color: white;
+}
+
+body.dark-theme .hero-actions .btn,
+body.dark-theme .cta-section .btn {
+    background-color: white;
+    color: var(--primary-dark);
+    border-color: white;
+}
+
+body.dark-theme .hero-actions .btn-outline,
+body.dark-theme .cta-section .btn-outline {
+    background-color: transparent;
+    color: white;
+    border-color: white;
+}
+
+body.dark-theme .hero-actions .btn-outline:hover,
+body.dark-theme .cta-section .btn-outline:hover {
+    background-color: white;
+    color: var(--primary-dark);
+}

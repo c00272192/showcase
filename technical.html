@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="academic-theme">
     <header>
         <nav>
-            <a href="index.html" class="logo">DylanOD</a>
+            <a href="index.html" class="logo">dylan<span>@</span>setu</a>
             <ul class="nav-links">
                 <li><a href="index.html#about">About</a></li>
                 <li><a href="demo.html">Demo</a></li>
@@ -30,138 +30,413 @@
         </div>
     </div>
 
-    <section class="technical-section">
-        <div class="container">
-            <div class="technical-overview">
-                <h2>Technical Approach</h2>
-                <p>This research project explores the viability of consumer-grade LiDAR and photogrammetry for professional property assessment. The technical implementation involves several key components and processes that enable accurate, accessible documentation of derelict properties.</p>
-            </div>
-
-            <div class="technical-details">
-                <div class="technical-card">
-                    <h3>Hardware Used</h3>
-                    <ul>
-                        <li><strong>iPhone 13 Pro</strong> - Primary LiDAR scanning device</li>
-                        <li><strong>iPad Pro 12.9" (2021)</strong> - Secondary scanning device for comparison</li>
-                        <li><strong>Leica Disto X4</strong> - Professional laser measuring tool for validation</li>
-                        <li><strong>MacBook Pro M1</strong> - For processing and model optimization</li>
-                    </ul>
-                </div>
-
-                <div class="technical-card">
-                    <h3>Software Stack</h3>
-                    <ul>
-                        <li><strong>Polycam</strong> - iOS app for LiDAR scanning and initial model creation</li>
-                        <li><strong>Scaniverse</strong> - Alternative iOS app used for comparative scanning</li>
-                        <li><strong>Meshroom</strong> - Photogrammetry processing software</li>
-                        <li><strong>Blender</strong> - 3D model optimization and cleanup</li>
-                        <li><strong>Sketchfab</strong> - Web platform for hosting and sharing 3D models</li>
-                    </ul>
-                </div>
-
-                <div class="technical-card" id="tutorial">
-                    <h3>Scanning Methodology</h3>
-                    <ol>
-                        <li><strong>Pre-scan preparation</strong> - Property cleanup, lighting setup, reference markers</li>
-                        <li><strong>Systematic scanning</strong> - Room-by-room approach with 25% overlap between scans</li>
-                        <li><strong>Detail capture</strong> - Special attention to architectural features and structural damage</li>
-                        <li><strong>Validation measurements</strong> - Taking reference measurements with traditional tools</li>
-                        <li><strong>Post-processing</strong> - Model cleanup, alignment, and optimization</li>
-                    </ol>
-                </div>
-
-                <div class="technical-card">
-                    <h3>Data Processing Pipeline</h3>
-                    <p>Raw scan data undergoes several processing stages:</p>
-                    <ol>
-                        <li><strong>Initial scan registration</strong> - Aligning multiple scans into cohesive model</li>
-                        <li><strong>Noise reduction</strong> - Removing scanning artifacts and outliers</li>
-                        <li><strong>Mesh optimization</strong> - Reducing polygon count while preserving detail</li>
-                        <li><strong>Texture mapping</strong> - Applying photographic data to 3D geometry</li>
-                        <li><strong>File conversion</strong> - Preparing optimized files for web delivery</li>
-                        <li><strong>Annotation</strong> - Adding measurement points and condition notes</li>
-                    </ol>
-                </div>
-            </div>
-
-            <div class="technical-challenges">
-                <h2>Challenges & Solutions</h2>
-                <div class="challenge-grid">
-                    <div class="challenge-card">
-                        <h3>Low Light Conditions</h3>
-                        <p><strong>Challenge:</strong> Many derelict properties lack electricity, creating dark scanning environments.</p>
-                        <p><strong>Solution:</strong> Utilized LiDAR's infrared capabilities supplemented with portable battery-powered LED panels for critical areas.</p>
-                    </div>
-
-                    <div class="challenge-card">
-                        <h3>Reflective Surfaces</h3>
-                        <p><strong>Challenge:</strong> Windows and mirrored surfaces causing scanning artifacts.</p>
-                        <p><strong>Solution:</strong> Temporary application of non-reflective coverings and algorithmic cleaning in post-processing.</p>
-                    </div>
-
-                    <div class="challenge-card">
-                        <h3>Complex Geometries</h3>
-                        <p><strong>Challenge:</strong> Ornate architectural details failing to scan accurately.</p>
-                        <p><strong>Solution:</strong> Supplemental photogrammetry capture and manual model adjustment for complex features.</p>
-                    </div>
-
-                    <div class="challenge-card">
-                        <h3>Data Size Management</h3>
-                        <p><strong>Challenge:</strong> Raw scans producing extremely large files (5-10GB per property).</p>
-                        <p><strong>Solution:</strong> Developed a decimation workflow that preserves critical measurements while reducing file size by up to 85%.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="technical-future">
-                <h2>Future Technical Developments</h2>
-                <p>This research has identified several promising directions for future technical improvements:</p>
-                <ul>
-                    <li>Integration with Building Information Modeling (BIM) platforms for direct import</li>
-                    <li>Automated structural damage detection using machine learning algorithms</li>
-                    <li>Development of a measurement API for programmatic access to dimensional data</li>
-                    <li>Cloud-based processing to reduce hardware requirements</li>
-                    <li>Implementation of augmented reality visualization for on-site assessment</li>
+    <main class="academic-layout">
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <h3>Technical Overview</h3>
+                <ul class="sidebar-nav">
+                    <li><a href="#hardware">Hardware Used</a></li>
+                    <li><a href="#software">Software Stack</a></li>
+                    <li><a href="#tutorial">Scanning Methodology</a></li>
+                    <li><a href="#processing">Data Processing</a></li>
+                    <li><a href="#challenges">Challenges & Solutions</a></li>
                 </ul>
+                
+                <h3>Quick Stats</h3>
+                <div class="stat-highlight">
+                    <span class="stat-number">42 min</span>
+                    <span class="stat-desc">Average scan time per property</span>
+                </div>
+                <div class="stat-highlight">
+                    <span class="stat-number">85%</span>
+                    <span class="stat-desc">File size reduction through optimization</span>
+                </div>
+                <div class="stat-highlight">
+                    <span class="stat-number">97%</span>
+                    <span class="stat-desc">Measurement accuracy</span>
+                </div>
+                
+                <div class="download-section">
+                    <h3>Resources</h3>
+                    <a href="full-report.pdf#technical" class="download-link"><i class="fas fa-file-pdf"></i> Technical Specifications</a>
+                    <a href="scanning-guide.pdf" class="download-link"><i class="fas fa-book"></i> Scanning Guide</a>
+                </div>
             </div>
+        </aside>
 
-            <div class="cta-container">
-                <a href="full-report.pdf" class="btn">Download Technical Specifications</a>
-            </div>
-        </div>
-    </section>
+        <div class="content-area">
+            <section class="content-section">
+                <h2>Technical Approach</h2>
+                <div class="section-content">
+                    <p class="lead-paragraph">This research project explores the viability of consumer-grade LiDAR and photogrammetry for professional property assessment. The technical implementation involves several key components and processes that enable accurate, accessible documentation of derelict properties.</p>
+                    
+                    <div class="findings-highlight">
+                        <p>By leveraging the latest consumer technologies, this research demonstrates how accurate property assessment can be achieved at a fraction of the traditional cost and time investment—with measurements accurate to within 3cm of professional standards.</p>
+                    </div>
+                </div>
+            </section>
 
-    <footer>
+            <section id="hardware" class="content-section">
+                <h2>Hardware Used</h2>
+                <div class="section-content">
+                    <div class="tools-used">
+                        <div class="tools-grid">
+                            <div class="tool-item">
+                                <i class="fas fa-mobile-alt"></i>
+                                <h4>iPhone 16 Pro</h4>
+                                <p>Primary LiDAR scanning device</p>
+                            </div>
+
+                            <div class="tool-item">
+                                <i class="fas fa-tablet-alt"></i>
+                                <h4>iPhone 13 </h4>
+                                <p>Secondary scanning device</p>
+                            </div>
+                            
+                            <div class="tool-item">
+                                <i class="fas fa-ruler"></i>
+                                <h4>Leica Disto X4</h4>
+                                <p>Professional laser measuring tool</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="two-column" style="margin-top: 2rem;">
+                        <div>
+                            <h4>Consumer vs Professional Hardware</h4>
+                            <p>A key finding of this research is that consumer-grade hardware with built-in LiDAR sensors can achieve results comparable to dedicated professional scanning equipment costing 20-30 times more.</p>
+                            <p>While professional hardware offers higher precision, the difference in accuracy (±3mm vs ±30mm) is negligible for most property assessment applications, making consumer technology a viable alternative for widespread adoption.</p>
+                        </div>
+                        
+                        <div>
+                        <img src="images\consumer.png" alt="Clickable Image">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="software" class="content-section">
+                <h2>Software Stack</h2>
+                <div class="section-content">
+                    <p>The research utilized a combination of mobile applications and desktop software to create a complete pipeline from scanning to final model delivery:</p>
+                    
+                    <div class="tools-used">
+                        <div class="tools-grid">
+                            <div class="tool-item">
+                                <i class="fas fa-cube"></i>
+                                <h4>Polycam</h4>
+                                <p>iOS app for LiDAR scanning and model creation</p>
+                            </div>
+
+                            <div class="tool-item">
+                                <i class="fas fa-cube"></i>
+                                <h4>Scaniverse</h4>
+                                <p>Alternative iOS scanning app</p>
+                            </div>
+                            
+                            <div class="tool-item">
+                                <i class="fas fa-cubes"></i>
+                                <h4>Blender</h4>
+                                <p>3D model optimization</p>
+                            </div>
+                            
+                            <div class="tool-item">
+                                <i class="fas fa-globe"></i>
+                                <h4>Sketchfab</h4>
+                                <p>3D model hosting platform</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="table-responsive" style="margin-top: 2rem;">
+                        <table class="academic-table">
+                            <thead>
+                                <tr>
+                                    <th>Software</th>
+                                    <th>Primary Function</th>
+                                    <th>Key Features</th>
+                                    <th>Limitations</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Polycam</td>
+                                    <td>LiDAR scanning</td>
+                                    <td>Real-time feedback, high performance on complex spaces</td>
+                                    <td>Limited processing options, subscription model</td>
+                                </tr>
+                                <tr>
+                                    <td>Scaniverse</td>
+                                    <td>LiDAR scanning</td>
+                                    <td>Better texture quality, more export options</td>
+                                    <td>Slower processing, occasionally less stable</td>
+                                </tr>
+                                <tr>
+                                    <td>Sketchfab</td>
+                                    <td>Hosting 3D Models</td>
+                                    <td>Hosts 3D models vr/ar compatibility </td>
+                                    <td>Privacy issues, hosting externally</td>
+                                </tr>
+                                <tr>
+                                    <td>Blender</td>
+                                    <td>Model optimization</td>
+                                    <td>Comprehensive tools, scripting capabilities</td>
+                                    <td>Complex interface, high skill requirements</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section id="tutorial" class="content-section">
+                <h2>Scanning Methodology</h2>
+                <div class="section-content">
+                    <p class="lead-paragraph">A structured, systematic approach to scanning ensures consistent, high-quality results even when used by non-specialists.</p>
+                    
+                    <div class="methodology-diagram">
+                        <div class="method-stage">
+                            <div class="stage-number">1</div>
+                            <h4>Preparation</h4>
+                            <ul class="method-details">
+                                <li>Property cleanup and staging</li>
+                                <li>Lighting setup for consistent illumination</li>
+                                <li>Placement of reference markers</li>
+                                <li>Equipment calibration and testing</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="method-stage">
+                            <div class="stage-number">2</div>
+                            <h4>Scanning</h4>
+                            <ul class="method-details">
+                                <li>Room-by-room systematic approach</li>
+                                <li>25% overlap between scan areas</li>
+                                <li>Careful attention to corners and edges</li>
+                                <li>Multiple passes for complex features</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="method-stage">
+                            <div class="stage-number">3</div>
+                            <h4>Validation</h4>
+                            <ul class="method-details">
+                                <li>Reference measurements with traditional tools</li>
+                                <li>Feature verification and documentation</li>
+                                <li>Quality assessment and rescan if needed</li>
+                                <li>Initial model review before leaving site</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="two-column" style="margin-top: 3rem;">
+                        <div>
+                            <h4>Best Practices for Scanning</h4>
+                            <ul class="academic-list">
+                                <li>Scan during daylight hours when possible to maximize natural lighting</li>
+                                <li>Move slowly and steadily to ensure proper data capture</li>
+                                <li>Maintain a consistent distance from surfaces (1-2 meters is optimal)</li>
+                                <li>Focus additional attention on architectural details and areas of damage</li>
+                                <li>Keep the device in portrait orientation for vertical spaces</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4>Scanning Time Breakdown</h4>
+                            <ul class="academic-list">
+                                <li><strong>Preparation:</strong> 15-20 minutes</li>
+                                <li><strong>Primary scan:</strong> 20-45 minutes (depending on property size)</li>
+                                <li><strong>Detail capture:</strong> 10-15 minutes</li>
+                                <li><strong>Validation:</strong> 10-15 minutes</li>
+                                <li><strong>Total on-site time:</strong> 55-95 minutes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="processing" class="content-section">
+                <h2>Data Processing Pipeline</h2>
+                <div class="section-content">
+                    <p>Raw scan data undergoes several processing stages to create accurate, usable 3D models:</p>
+                    
+                    <div class="media-text-container">
+                        <div class="text-content">
+                            <ol class="academic-list">
+                                <li><strong>Initial scan registration</strong> - Aligning multiple scans into cohesive model</li>
+                                <li><strong>Noise reduction</strong> - Removing scanning artifacts and outliers</li>
+                                <li><strong>Mesh optimization</strong> - Reducing polygon count while preserving detail</li>
+                                <li><strong>Texture mapping</strong> - Applying photographic data to 3D geometry</li>
+                                <li><strong>File conversion</strong> - Preparing optimized files for web delivery</li>
+                                <li><strong>Annotation</strong> - Adding measurement points and condition notes</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="media-content">
+                            <img src="images/processing-pipeline.jpg" alt="Data processing pipeline visualization" class="research-image">
+                            <p class="caption">Fig 1: Data processing pipeline for creating usable 3D models from raw scan data</p>
+                        </div>
+                    </div>
+                    
+                    <div class="findings-highlight">
+                        <p>Through optimization, the final 3D models are typically reduced to 10-15% of their original file size while maintaining over 95% of the measurement accuracy—enabling efficient web delivery and viewing on standard devices.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="challenges" class="content-section">
+                <h2>Challenges & Solutions</h2>
+                <div class="section-content">
+                    <p class="lead-paragraph">Several technical challenges were encountered during the research, each requiring innovative solutions:</p>
+                    
+                    <div class="findings-grid">
+                        <div class="finding-card">
+                            <div class="finding-icon"><i class="fas fa-low-vision"></i></div>
+                            <h3>Low Light Conditions</h3>
+                            <p><strong>Challenge:</strong> Many derelict properties lack electricity, creating dark scanning environments.</p>
+                            <p><strong>Solution:</strong> Utilized LiDAR's infrared capabilities supplemented with portable battery-powered LED panels for critical areas.</p>
+                        </div>
+
+                        <div class="finding-card">
+                            <div class="finding-icon"><i class="fas fa-border-none"></i></div>
+                            <h3>Reflective Surfaces</h3>
+                            <p><strong>Challenge:</strong> Windows and mirrored surfaces causing scanning artifacts.</p>
+                            <p><strong>Solution:</strong> Temporary application of non-reflective coverings and algorithmic cleaning in post-processing.</p>
+                        </div>
+                        
+                        <div class="finding-card">
+                            <div class="finding-icon"><i class="fas fa-drafting-compass"></i></div>
+                            <h3>Complex Geometries</h3>
+                            <p><strong>Challenge:</strong> Ornate architectural details failing to scan accurately.</p>
+                            <p><strong>Solution:</strong> Supplemental photogrammetry capture and manual model adjustment for complex features.</p>
+                        </div>
+                        
+                        <div class="finding-card">
+                            <div class="finding-icon"><i class="fas fa-database"></i></div>
+                            <h3>Data Size Management</h3>
+                            <p><strong>Challenge:</strong> Raw scans producing extremely large files (5-10GB per property).</p>
+                            <p><strong>Solution:</strong> Developed a decimation workflow that preserves critical measurements while reducing file size by up to 85%.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="future-research">
+                        <h3>Future Technical Developments</h3>
+                        <ul class="research-directions">
+                            <li>
+                                <h4>BIM Integration</h4>
+                                <p>Seamless import into Building Information Modeling platforms</p>
+                            </li>
+                            <li>
+                                <h4>Automated Damage Detection</h4>
+                                <p>Machine learning algorithms to identify structural issues</p>
+                            </li>
+                            <li>
+                                <h4>Measurement API</h4>
+                                <p>Programmatic access to dimensional data from 3D models</p>
+                            </li>
+                            <li>
+                                <h4>Cloud Processing</h4>
+                                <p>Reduced hardware requirements through cloud computing</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+          
+    </main>
+
+    <footer class="academic-footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">
+                <div class="footer-info">
                     <h3>Dylan O'Donnell</h3>
-                    <p>LiDAR Property Assessment Research</p>
+                    <p>Bachelor of Honours<br>South East Technological University</p>
+                    <p class="copyright">&copy; 2025 Dylan O'Donnell. All rights reserved.</p>
                 </div>
                 
                 <div class="footer-links">
-                    <h4>Quick Links</h4>
+                    <h4>Project Sections</h4>
                     <ul>
                         <li><a href="index.html#about">About</a></li>
-                        <li><a href="demo.html">Demo</a></li>
+                        <li><a href="index.html#research">Research Context</a></li>
+                        <li><a href="index.html#methodology">Methodology</a></li>
+                        <li><a href="index.html#findings">Findings</a></li>
+                        <li><a href="index.html#implications">Implications</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="demo.html">Interactive Demo</a></li>
                         <li><a href="technical.html">Technical Details</a></li>
                         <li><a href="ethical.html">Ethical Considerations</a></li>
-                        <li><a href="business.html">Business Model</a></li>
+                        <li><a href="business.html">Business Applications</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-acknowledgment">
                     <h4>Acknowledgments</h4>
-                    <p>This research project was conducted as part of a Masters dissertation at University College Dublin, with support from the School of Computer Science and the Housing Agency of Ireland.</p>
+                    <p>This research was supported by the School of Computing at South East Technological University (SETU) Carlow. Special thanks to property owners for granting access to their properties for this study.</p>
                 </div>
-            </div>
-            
-            <div class="copyright">
-                <p>&copy; 2025 Dylan O'Donnell. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Theme toggle button created directly in the HTML -->
+    <button class="theme-switch" title="Toggle dark/light mode">
+        <i class="fas fa-adjust"></i>
+    </button>
+
+    <!-- Script for the theme switcher - Load this first -->
+    <script>
+        // Theme switcher functionality
+        const themeButton = document.querySelector('.theme-switch');
+        if (themeButton) {
+            // Check for saved preference and apply it
+            const currentTheme = localStorage.getItem('theme');
+            if (currentTheme === 'dark') {
+                document.body.classList.add('dark-theme');
+                themeButton.classList.add('dark-active');
+            }
+            
+            // Toggle theme on click
+            themeButton.addEventListener('click', function() {
+                document.body.classList.toggle('dark-theme');
+                
+                if (document.body.classList.contains('dark-theme')) {
+                    localStorage.setItem('theme', 'dark');
+                    themeButton.classList.add('dark-active');
+                } else {
+                    localStorage.setItem('theme', 'light');
+                    themeButton.classList.remove('dark-active');
+                }
+            });
+        }
+    </script>
+
+    <!-- Main JS last -->
     <script src="js/main.js"></script>
+    
+    <!-- Preload for performance -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <script>
+        // Direct theme toggle - completely standalone
+        document.querySelector('.theme-switch').addEventListener('click', function() {
+            // Toggle dark theme class
+            document.body.classList.toggle('dark-theme');
+            
+            // Save preference
+            if (document.body.classList.contains('dark-theme')) {
+                localStorage.setItem('theme', 'dark');
+                this.classList.add('dark-active');
+            } else {
+                localStorage.setItem('theme', 'light');
+                this.classList.remove('dark-active');
+            }
+        });
+        </script>
 </body>
 </html>
